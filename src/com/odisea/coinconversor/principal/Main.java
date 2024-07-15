@@ -14,8 +14,11 @@ import java.net.http.HttpResponse;
 import java.util.Scanner;
 
 public class Main {
+
+    public static String APIKEY = "HERE YOUR API KEY";
+
     public static void main(String[] args) throws IOException, InterruptedException {
-        System.out.println("Hello world!");
+
 
         String op = "0";
         Scanner opci = new Scanner(System.in);
@@ -97,7 +100,7 @@ public class Main {
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .setPrettyPrinting()
                 .create();
-        String direction ="https://v6.exchangerate-api.com/v6/8736629935531fcc85ea7f82/latest/";
+        String direction ="https://v6.exchangerate-api.com/v6/"+APIKEY+"/latest/";
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(direction + parametro))
