@@ -2,7 +2,7 @@
 
 **Este programa es únicamente para Consola de Comandos**
 
-###Instalación
+### Instalación
 #### Requerimientos
 Es necesario tener:
 - Java
